@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENSUU's Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="addBook">
+        <h1>BookBase</h1>
+        <form class="addBookForm" action="" method="">
+            <label for="title">Book Title</label>
+            <input type="text" name="title" id="title">
+
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+
+            <label for="pageNumber">Number of Pages</label>
+            <input type="number" name="pageNumber" id="pageNumber">
+            
+            <div class="isReadContainer">
+                <label for="isRead">Did you finish reading it?</label>
+                <input type="checkbox" name="isRead" id="isRead">
+            </div>
+
+            <button class='createBook' type="submit">Create Book</button>
+        </form>
+    </div>
+    <div class="bookshelf">
+
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
