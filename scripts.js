@@ -10,7 +10,7 @@ class Book {
         return `${this.title} by ${this.author} has ${this.pages} pages. Completed: ${this.isRead}` ; 
     }
 }
-
+ 
 class Library {
     constructor() {
         this.books = []; 
@@ -70,11 +70,27 @@ function displayBooks() {
 
         // Adding button to toggle read status
         const readStatusButton = document.createElement('button'); 
-        readStatusButton.textContent = 'Not Read'; 
+        
+        if (book.isRead === true) {
+            readStatusButton.textContent = 'Read'; 
+            readStatusButton.style.cssText = 'background-color: green; color: white;'; 
+        }
+        else {
+            readStatusButton.textContent = 'Not Read'; 
+            readStatusButton.style.cssText = 'background-color: red; color: white;';
+        }
 
         readStatusButton.addEventListener('click', (e) => {
             e.preventDefault(); 
-            book.isRead = true; 
+            book.isRead = book.isRead === true ? false : true; 
+            if (book.isRead === true) {
+                readStatusButton.textContent = 'Read'; 
+                readStatusButton.style.cssText = 'background-color: green; color: white;'; 
+            }
+            else {
+                readStatusButton.textContent = 'Not Read'; 
+                readStatusButton.style.cssText = 'background-color: red; color: white;';
+            }
         })
 
         bookCard.appendChild(bookCardTitle); 
