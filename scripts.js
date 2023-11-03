@@ -15,21 +15,17 @@ class Library {
     constructor() {
         this.books = []; 
     }
-
     addBook(book) {
         if (!this.alreadyExists(book)) {
             this.books.push(book); 
         }
     }
-
     removeBook(bookTitle) {
         this.books = this.books.filter(book => book.title != bookTitle); 
     }
-
     getBook(bookTitle) {
         return this.books.includes(bookTitle); 
     }
-
     alreadyExists(book) {
         return this.books.includes(book);
     }
@@ -101,10 +97,10 @@ function displayBooks() {
     })
 }
 
-
-const createButton = document.querySelector('.createBook'); 
-createButton.addEventListener('click', (e) => {
+const addBookForm = document.querySelector('.addBookForm');
+addBookForm.addEventListener('submit', (e) => {
     e.preventDefault(); // Prevent page reload. 
+
     const bookTitle = document.querySelector("#title").value; 
     const bookAuthor = document.querySelector("#author").value; 
     const pageNumber = document.querySelector("#pageNumber").value; 
@@ -120,5 +116,6 @@ createButton.addEventListener('click', (e) => {
     // .reset will clear the residual text inside the input HTML elements. 
     const addBookForm = document.querySelector('.addBookForm'); 
     addBookForm.reset(); 
+
 })
 

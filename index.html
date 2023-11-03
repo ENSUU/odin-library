@@ -9,23 +9,23 @@
 <body>
     <div class="addBook">
         <h1>BookBase</h1>
-        <form class="addBookForm" action="" method="">
+        <form class="addBookForm">
             <label for="title">Book Title</label>
-            <input type="text" name="title" id="title">
+            <input type="text" name="title" id="title" required />
 
             <label for="author">Author</label>
-            <input type="text" name="author" id="author">
+            <input type="text" name="author" id="author" required />
 
             <label for="pageNumber">Number of Pages</label>
-            <input type="number" name="pageNumber" id="pageNumber">
+            <input type="number" name="pageNumber" id="pageNumber" required />
             
             <div class="isReadContainer">
-                <label for="isRead">Did you finish reading it?</label>
-                <input type="checkbox" name="isRead" id="isRead">
+                <label for="isRead">Finished Reading?</label>
+                <input type="checkbox" name="isRead" id="isRead" />
             </div>
 
             <button class='createBook' type="submit">Create Book</button>
-        </form>
+        </form> 
     </div>
     <div class="bookshelf">
 
